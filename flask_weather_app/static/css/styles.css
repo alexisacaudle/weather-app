@@ -1,0 +1,5 @@
+/* static/css/styles.css */
+
+body {
+    transition: background-color 1s ease;  /* Smooth transition for background color */
+}
