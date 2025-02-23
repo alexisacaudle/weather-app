@@ -6,7 +6,7 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-<body style="background-color: {{ rgb_color }};">
+<body class="{{ weather_condition }}">
     <h1>Weather App</h1>
     <form method="post">
         <input type="text" name="city" placeholder="Enter city" required>
@@ -18,5 +18,10 @@
         <p>Temperature: {{ weather.main.temp }}°F</p>
         <p>Weather: {{ weather.weather[0].description }}</p>
     {% endif %}
+
+    <!-- Weather animation container -->
+    <div class="weather-animation"></div>
+
+    <script src="{{ url_for('static', filename='js/weather.js') }}"></script>
 </body>
 </html>
